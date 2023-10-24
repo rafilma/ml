@@ -63,7 +63,7 @@ Variable yang di pergunakan sebagai parimeter meliputi :
 ### Variabel-variabel pada Heart Failure Prediction Dataset adalah sebagai berikut:
 Variable di dasarkan pada data satu tahun terakhir dimana setiap parameternya di isikan data integer untuk skala 1-10
 - Usia : Usia kita saat menjalakan test
-- Jenis Kelamin : Jneis kelamin [1 jika kita adalah pria, 2 jika kita adalah wanita]
+- Jenis Kelamin : Jeniss kelamin
 - Polusi Udara : Seberapa sering kita terpapar daerah yang rawan akan polusi udara
 - Konsumsi Alkohol : Menunjukan seberapa sering kita mengkonsumsi alkohol
 - Alergi terhadap debu : Menunjukan tingkat alergi kita terhadap debu
