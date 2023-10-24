@@ -6,7 +6,12 @@ diagnosis = pickle.load(open('resiko_cancer.sav', 'rb'))
 st.title('Diagnosa Resiko Anda Terkena Penyakit Kanker Paru')
 
 Age = st.text_input('Usia Anda')
-Gender = st.text_input('Jenis Kelamin (1 Jika Laki laki, 2 Jika Wanita)')
+Gender = st.selectbox('Jenis Kelamin anda ?', ['Laki laki', 'Wanita'])
+
+if Gender == 'Laki laki':
+    Gender = 1
+else:
+    Gender = 2
 Air_Pollution = st.text_input('Dalam skala 1-10 seberapa sering anda terkena polusi udara ?')
 Alcohol_use = st.text_input('Dalam skala 1-10 seberapa sering anda meminum alkohol ?')
 Dust_Allergy = st.text_input('Dalam skala 1-10 apakah anda punya alergi terhadap debu ?')
