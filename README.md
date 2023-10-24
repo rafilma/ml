@@ -61,7 +61,7 @@ Dataset tersebut sejatinya dibuat untuk mempelajari dan memprediksi faktor apa s
 Variable yang di pergunakan sebagai parimeter meliputi :  
 
 ### Variabel-variabel pada Heart Failure Prediction Dataset adalah sebagai berikut:
-Variable di dasarkan pada data satu tahun terakhir
+Variable di dasarkan pada data satu tahun terakhir dimana setiap parameternya di isikan data integer untuk skala 1-10
 - Usia : Usia kita saat menjalakan test
 - Jenis Kelamin : Jneis kelamin [1 jika kita adalah pria, 2 jika kita adalah wanita]
 - Polusi Udara : Seberapa sering kita terpapar daerah yang rawan akan polusi udara
@@ -289,23 +289,12 @@ maka didapatkan matrix sebagai berikut
 ![alt text](https://github.com/rafilma/ml/blob/main/matrix%20evaluation.png)
 
 dan ketika di jabarkan kita akan mendapatkan score :
+![alt text](https://github.com/rafilma/ml/blob/main/score%20f1.png)
 
+Bisa disimpulkan Akurasinya sebanyak 100% dengan rata rata 99.5%
+Aplikasi ini sangat bisa digunakan untuk salah satu cara melakukan diagnosa awal apakah kita rawan terkena resiko kanker paru paru atau tidak supaya bisa dilakukan tindakan pencegahan jauh jauh hari.
 
-Sebagai contoh, Anda memiih kasus klasifikasi dan menggunakan metrik **akurasi, precision, recall, dan F1 score**. Jelaskan mengenai beberapa hal berikut:
-- Penjelasan mengenai metrik yang digunakan
-- Menjelaskan hasil proyek berdasarkan metrik evaluasi
-
-Ingatlah, metrik evaluasi yang digunakan harus sesuai dengan konteks data, problem statement, dan solusi yang diinginkan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan formula metrik dan bagaimana metrik tersebut bekerja.
 
 ## Deployment
-pada bagian ini anda memberikan link project yang diupload melalui streamlit share. boleh ditambahkan screen shoot halaman webnya.
-
-**---Ini adalah bagian akhir laporan---**
-
-_Catatan:_
-- _Anda dapat menambahkan gambar, kode, atau tabel ke dalam laporan jika diperlukan. Temukan caranya pada contoh dokumen markdown di situs editor [Dillinger](https://dillinger.io/), [Github Guides: Mastering markdown](https://guides.github.com/features/mastering-markdown/), atau sumber lain di internet. Semangat!_
-- Jika terdapat penjelasan yang harus menyertakan code snippet, tuliskan dengan sewajarnya. Tidak perlu menuliskan keseluruhan kode project, cukup bagian yang ingin dijelaskan saja.
-
+[Diagnosa Resiko Terkena Kanker Paru](https://utsmachinelearning.streamlit.app/)
+![alt text](https://github.com/rafilma/ml/blob/main/Screenshot%20(24).png)
