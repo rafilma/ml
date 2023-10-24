@@ -168,11 +168,20 @@ colname = ['Age', 'Gender', 'Air_Pollution', 'Alcohol_use',
 df.columns = colname
 df
 ```
+Kemudian karena model ini hanya bisa menggunakan inputan integer maka kita harus rubah value dari kolom diagnosis dengan perintah
+
+```bash
+df=df.replace({'Level':{'Low': 1, 'Medium': 2, 'High': 3}})
+```
+Maka data untuk kolom 'Level' akan berubah menjadi angka.
 
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan proses data preparation yang dilakukan
-- Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
+**Visualization**
+Disini kita coba lakukan sebuuah visualisasi data dengan modul seaborn
+```bash
+import seaborn as sns
+sns.set()
+```
 
 ## Modeling
 Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
