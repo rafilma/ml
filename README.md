@@ -6,9 +6,8 @@
 ## Domain Proyek
 
 Proyek yang saya angkat kali ini adalah kalkulasi resiko manusia terkena kanker paru paru beradasar 23 parimeter yang di tentukan, dimana menurut penelitian dalam 1.59 Juta korban kanker mayoritas di pengaruhi oleh faktor luar seperti asap rokok dan polusi udara.
-Maka dari itu, saya selaku pembuat mencoba mengkalkulasikan tingkat resiko anda terkena kanker paru untuk menjadikan sebagai tindakan pencegahan.
+Maka dari itu, saya selaku pembuat mencoba mengkalkulasikan tingkat resiko anda terkena kanker paru untuk menjadikan sebagai tindakan pencegahan guna anda menjadi lebih waspada
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
 
 ## Business Understanding
 
@@ -48,6 +47,10 @@ Jenis Penelitian yang digunakan adalah menggunakan skala 1-10 berdasarkan parime
 ### Goals
 
 Agar kita lebih waspada dalam menjaga pola hidup kita supaya terhindar dari resiko kanker Paru
+
+### Solution Statements
+- Dikembangan sebagai kalkukalasi tingkat resiko kita terkena kanker paru paru berdasarkan faktor eksternal dan internal
+- Menjadi bahan untuk meningkatkan kewaspadaan terhadap resiko terkena kanker paru paru supaya bisa di lakukan tindakan pencegahan
 
 ## Data Understanding
 Dataset yang dipergunakan dalan proyek ini di dapatkan di kaggle dimana dataset ini di dasarkan padan 1000 studi kasus terhadap pasien kanker dan di teliti berdasarkan 23 attribut diatas.
@@ -182,6 +185,7 @@ Disini kita coba lakukan sebuuah visualisasi data dengan modul seaborn
 import seaborn as sns
 sns.set()
 ```
+
 
 ## Modeling
 Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
