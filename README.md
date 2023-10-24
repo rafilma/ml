@@ -12,7 +12,7 @@ Maka dari itu, saya selaku pembuat mencoba mengkalkulasikan tingkat resiko anda 
 
 ## Business Understanding
 
-Proyek ini memudahkan kita untuk melakukan tindakan pencegahan jika kita terbukti rawan dan beresiko tinggi terpapar kanker paru
+Proyek ini memudahkan kita untuk melakukan tindakan pencegahan jika kita terbukti rawan dan beresiko tinggi terpapar kanker paru menggunakan algoritma klasifikasi SVC
 
 Bagian laporan ini mencakup:
 
@@ -50,22 +50,76 @@ Jenis Penelitian yang digunakan adalah menggunakan skala 1-10 berdasarkan parime
 Agar kita lebih waspada dalam menjaga pola hidup kita supaya terhindar dari resiko kanker Paru
 
 ## Data Understanding
-Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. dataset wajib menggunakan [kaggle](https://www.kaggle.com/) dan **atribut yang digunakan minimal 8 atribut**. Sertakan juga sumber atau tautan untuk mengunduh dataset.<br> 
+Dataset yang dipergunakan dalan proyek ini di dapatkan di kaggle dimana dataset ini di dasarkan padan 1000 studi kasus terhadap pasien kanker dan di teliti berdasarkan 23 attribut diatas.
+Dataset tersebut sejatinya dibuat untuk mempelajari dan memprediksi faktor apa saja yang menjadi pendukung seseorang terkena kanker paru paru dan solusi apa saja yang bisa di lakukan sebagai tindakan pencegahan.
 
-Contoh: [Heart Failure Prediction Dataset](https://www.kaggle.com/datasets/fedesoriano/heart-failure-prediction).
+[Lung Cancer Prediction](https://www.kaggle.com/datasets/thedevastator/cancer-patients-and-air-pollution-a-new-link).
 
-Selanjutnya uraikanlah seluruh variabel atau fitur pada data. Sebagai contoh:  
+Variable yang di pergunakan sebagai parimeter meliputi :  
 
 ### Variabel-variabel pada Heart Failure Prediction Dataset adalah sebagai berikut:
-- Age : merupakan umur pasien dalam satuan tahun.
-- Sex : merupakan jenis kelamin pasien meliputi [M: Male, F: Female].
-- dst
+Variable di dasarkan pada data satu tahun terakhir
+- Usia : Usia kita saat menjalakan test
+- Jenis Kelamin : Jneis kelamin [1 jika kita adalah pria, 2 jika kita adalah wanita]
+- Polusi Udara : Seberapa sering kita terpapar daerah yang rawan akan polusi udara
+- Konsumsi Alkohol : Menunjukan seberapa sering kita mengkonsumsi alkohol
+- Alergi terhadap debu : Menunjukan tingkat alergi kita terhadap debu
+- Pekerjaan yang melibatkan bahan berbahaya : Menanyakan seberapa sering kita terpapar bahan berbahaya selama bekerja
+- Faktor Genetik : Menanyakan faktor keturunan secara genetik apakah punya riwayat penyakit kanker paru
+- Penyakit Paru Bawaan : Sudah sekronis apa penykit paru bawaan kita
+- Makan Teratur : Seberapa sering kita makan secara teratur
+- Kelebihan Berat Badan : Seberapa obesitas kah kita dalam skala 1-10 (berdasarkan kalkulasi berat badan ideal)
+- Perokok : Seberapa sering kita merokok
+- Perokok Pasif : Seberapa sering kita menjadi perokok pasif
+- Nyeri Dada : Seberapa sering kita mengalami nyeri dada
+- Batuk Berdarah : Seberapa sering kita mengalami batuk berdarah
+- Kelelahan : Seberapa sering kita mengalami kelelahan (Kurang tidur, Bekerja lembur, overworked)
+- Kekurangan Berat Badan : Seberapa sering kita kekurangan berart badan (Berdasarkan kalkulasi berat badan ideal)
+- Sesak Nafas : Seberapa sering kita mengalami sesak dalam pernafasan
+- Mengi pada Pernafasan : Seberapa sering kita mengalami mengi (wheezing) saat bernafas)
+- Kesusahan dalam menelan : Seberapa sering kita mengalami kesusahan dalam menelan makan
+- Pembengkakan pada Jari : Seberapa sering kita mengalami pembengkakan pada jari tangan
+- Demam : Seberapa sering kita terkenan demam dan flu
+- Batuk Batuk : Seberapa sering kita mengalami batuk batuk
+- Ngorok : Seberapa sering kita mengorok saat tertidur
 
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Melakukan beberapa tahapan yang diperlukan untuk memahami data, contohnya teknik visualisasi data atau exploratory data analysis.
 
 ## Data Preparation
-Pada bagian ini Anda menerapkan dan menyebutkan teknik data preparation yang dilakukan. Teknik yang digunakan pada notebook dan laporan harus berurutan.
+Data yang diambil berdaasrkan data kaggle
+
+Pertama kita import dulu library yang di butuh dengan memasukan perintah :
+
+```bash
+import pandas as pd
+import numpy as np
+import matplotlib.pyplot as plt
+from sklearn import svm
+from sklearn.model_selection import train_test_split
+from sklearn.linear_model import LogisticRegression
+from sklearn.preprocessing import StandardScaler, OneHotEncoder
+from sklearn.compose import ColumnTransformer
+from sklearn.metrics import accuracy_score
+```
+Kemudian agar aplikasi bisa berjalan otomatis di collab maka kita harus mengkoneksikan file token kaggle kedalam aplikasi kita dan membuat directory khusus.
+
+```bash
+from google.colab import files
+files.upload()
+```
+upload file token kaggle kita kemudian
+
+```bash
+!mkdir -p ~/.kaggle
+!cp kaggle.json ~/.kaggle/
+!chmod 600 ~/.kaggle/kaggle.json
+!ls ~/.kaggle
+```
+
+Jika direktori sudah dibuat maka kita bisa mendownload datasetnya 
+
+```bash
+!kaggle datasets download -d thedevastator/cancer-patients-and-air-pollution-a-new-link
+```
 
 **Rubrik/Kriteria Tambahan (Opsional)**: 
 - Menjelaskan proses data preparation yang dilakukan
