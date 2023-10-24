@@ -1,46 +1,53 @@
 # Laporan Proyek Machine Learning
-### Nama : 
-### Nim :
-### Kelas :
+### Nama : Rafil Moehamad Alif
+### Nim : 211351116
+### Kelas : Malam B
 
 ## Domain Proyek
 
-Pada bagian ini, kamu perlu menuliskan latar belakang yang relevan dengan proyek yang diangkat.
+Proyek yang saya angkat kali ini adalah kalkulasi resiko manusia terkena kanker paru paru beradasar 23 parimeter yang di tentukan, dimana menurut penelitian dalam 1.59 Juta korban kanker mayoritas di pengaruhi oleh faktor luar seperti asap rokok dan polusi udara.
+Maka dari itu, saya selaku pembuat mencoba mengkalkulasikan tingkat resiko anda terkena kanker paru untuk menjadikan sebagai tindakan pencegahan.
 
 **Rubrik/Kriteria Tambahan (Opsional)**:
-- Jelaskan mengapa dan bagaimana masalah tersebut harus diselesaikan
-- Menyertakan hasil riset terkait atau referensi. Referensi yang diberikan harus berasal dari sumber yang kredibel dan author yang jelas.
-  
-  Format Referensi: [Judul Referensi](https://scholar.google.com/) 
 
 ## Business Understanding
 
-Pada bagian ini, kamu perlu menjelaskan proses klarifikasi masalah.
+Proyek ini memudahkan kita untuk melakukan tindakan pencegahan jika kita terbukti rawan dan beresiko tinggi terpapar kanker paru
 
 Bagian laporan ini mencakup:
 
 ### Problem Statements
 
-Menjelaskan pernyataan masalah latar belakang:
-- Pernyataan Masalah 1
-- Pernyataan Masalah 2
-- Pernyataan Masalah n
+Seseorang bisa saja terkenan kanker paru berdasarkan parimeter :
+- Usia
+- Jenis Kelamin
+- Polusi Udara
+- Konsumsi Alkohol
+- Alergi terhadap debu
+- Pekerjaan yang melibatkan bahan berbahaya
+- Faktor Genetik
+- Penyakit Paru Bawaan
+- Makan Teratur
+- Kelebihan Berat Badan
+- Perokok
+- Perokok Pasif
+- Nyeri Dada
+- Batuk Berdarah
+- Kelelahan
+- Kekurangan Berat Badan
+- Sesak Nafas
+- Mengi pada Pernafasan
+- Kesusahan dalam menelan
+- Pembengkakan pada Jari
+- Demam
+- Batuk Batuk
+- Ngorok
+
+Jenis Penelitian yang digunakan adalah menggunakan skala 1-10 berdasarkan parimeter diatas, dan hasilnya kemudian di kalkulasikan apakah kita tergolong rendah resiko atau tinggi resiko
 
 ### Goals
 
-Menjelaskan tujuan dari pernyataan masalah:
-- Jawaban pernyataan masalah 1
-- Jawaban pernyataan masalah 2
-- Jawaban pernyataan masalah n
-
-Semua poin di atas harus diuraikan dengan jelas. Anda bebas menuliskan berapa pernyataan masalah dan juga goals yang diinginkan.
-
-**Rubrik/Kriteria Tambahan (Opsional)**:
-- Menambahkan bagian “Solution Statement” yang menguraikan cara untuk meraih goals. Bagian ini dibuat dengan ketentuan sebagai berikut: 
-
-    ### Solution statements
-    - Mengajukan 2 atau lebih solution statement. Misalnya, menggunakan dua atau lebih algoritma untuk mencapai solusi yang diinginkan atau melakukan improvement pada baseline model dengan hyperparameter tuning.
-    - Solusi yang diberikan harus dapat terukur dengan metrik evaluasi.
+Agar kita lebih waspada dalam menjaga pola hidup kita supaya terhindar dari resiko kanker Paru
 
 ## Data Understanding
 Paragraf awal bagian ini menjelaskan informasi mengenai data yang Anda gunakan dalam proyek. dataset wajib menggunakan [kaggle](https://www.kaggle.com/) dan **atribut yang digunakan minimal 8 atribut**. Sertakan juga sumber atau tautan untuk mengunduh dataset.<br> 
