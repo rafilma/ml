@@ -185,15 +185,102 @@ Disini kita coba lakukan sebuuah visualisasi data dengan modul seaborn
 import seaborn as sns
 sns.set()
 ```
+![alt text](https://github.com/rafilma/ml/blob/main/eda1.png)
 
+Atau kita bisa coba visualisasikan dengan cara lain yakni
+```bash
+sns.heatmap(df.corr()[['Level']].sort_values(by='Level', ascending=False), vmin=-1, vmax=1, annot=True, cmap='GnBu')
+```
+Dan akan diperoleh heatmap berikut
+![alt text](https://github.com/rafilma/ml/blob/main/eda2.png)
 
 ## Modeling
-Tahapan ini membahas mengenai model machine learning yang digunakan untuk menyelesaikan permasalahan. Anda perlu menjelaskan tahapan dan parameter yang digunakan pada proses pemodelan.
+Untuk melakukan proses modeling, disini saya menggunakan klasifikasi dengan algoritma SVC.
+Pertama kita harus menentukan parimeter X dan Y. X merupakan atrribut dan Y adalah Label
+karena kita akan menggunakan semua attribut dan mengecualikan satu kolom saja sebagai label maka bisa kita ketikan perintah
+```bash
+X = df.drop (columns='Level', axis=1)
+Y = df['Level']
+```
+Maka X akan menjadi semua kolom kecuali Level
 
-**Rubrik/Kriteria Tambahan (Opsional)**: 
-- Menjelaskan kelebihan dan kekurangan dari setiap algoritma yang digunakan.
-- Jika menggunakan satu algoritma pada solution statement, lakukan proses improvement terhadap model dengan hyperparameter tuning. **Jelaskan proses improvement yang dilakukan**.
-- Jika menggunakan dua atau lebih algoritma pada solution statement, maka pilih model terbaik sebagai solusi. **Jelaskan mengapa memilih model tersebut sebagai model terbaik**.
+Selanjutnya kita lakukan standarisi data dengan perintah
+
+```bash
+scaler = StandardScaler()
+```
+```bash
+scaler.fit(X)
+```
+```bash
+standarized_data = scaler.transform(X)
+```
+```bash
+X = standarized_data
+Y = df['Level']
+```
+Maka data yang terdapat pada nilai X akan di standarkan
+
+Selanjutkan kita lakukan pengetesan akurasi data
+
+```bash
+X_train, X_test, Y_train, Y_test = train_test_split(X,Y, test_size=0.3, stratify=Y, random_state=2)
+```
+Data test akan di jalankan sebanyak 30% dan data train sebanyak 70%
+
+Selanjutnya kita masukan dulu perintah klasifikasinya
+
+```bash
+classifier = svm.SVC(kernel='linear')
+```
+```bash
+classifier.fit(X_train, Y_train)
+```
+Jika sudah dimasukan maka kita bisa lakukan cek nilai akurasi data training
+```bash
+x_train_prediction = classifier.predict(X_train)
+training_data_accuracy = accuracy_score(x_train_prediction, Y_train)
+```
+```bash
+print('Tingkat akurasi data training = ', training_data_accuracy)
+```
+```bash
+Tingkat akurasi data training =  1.0
+```
+Didapat nilai akurasi 100%, hal ini dipengaruhi oleh jumlah parameter pada data yang digunakan, jika parameternya dikurangi maka tingkat akurasi juga terpengaruh
+
+Selanjutnya bisa dilakukan pengetesan dengan nilai array seperti kolom pada dataset
+```bash
+input_data = (17, 1, 3, 1, 5, 3, 4, 2, 2, 2, 2, 4, 2, 3, 1, 3, 7, 8, 6, 2, 1, 7, 2)
+
+input_data_as_numpy_array = np.array(input_data)
+
+input_data_reshape = input_data_as_numpy_array.reshape(1,-1)
+
+std_data = scaler.transform(input_data_reshape)
+print(std_data)
+
+prediction = classifier.predict(std_data)
+print(prediction)
+
+if (prediction[0] == 1):
+    print('Rendah Resiko')
+elif (prediction[0] == 2):
+        print('Resiko Menengah')
+else :
+    print('Resiko Tinggi')
+```
+Maka akan di peroleh ouput :
+```bash
+[[-1.68123833 -0.81990292 -0.41391868 -1.36035665 -0.08333998 -0.87338274
+  -0.27282112 -1.28816247 -1.16703997 -1.16062345 -0.78086997 -0.08439285
+  -1.069735   -0.7660449  -1.27301449 -0.38767737  1.20843596  2.06918561
+   0.99328083 -0.80566309 -1.38459305  1.54417079 -0.6282445 ]]
+[2]
+Resiko Menengah
+```
+Berdasarkan inputan kita, maka bisa di ketahui bahwa tingkat resiko kita terkena kanker paru paru sejauh mana
+
 
 ## Evaluation
 Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
