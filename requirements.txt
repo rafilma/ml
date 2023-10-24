@@ -5,3 +5,4 @@ streamlit
 pip
 scikit-learn
 sklearn
+pickle
