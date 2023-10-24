@@ -283,7 +283,13 @@ Berdasarkan inputan kita, maka bisa di ketahui bahwa tingkat resiko kita terkena
 
 
 ## Evaluation
-Pada bagian ini anda perlu menyebutkan metrik evaluasi yang digunakan. Lalu anda perlu menjelaskan hasil proyek berdasarkan metrik evaluasi yang digunakan.
+Pada tabel evaluasi kita tentukan nilai f1 score dengan nilai presisinya menggunakan tabel matrix confusion
+maka didapatkan matrix sebagai berikut
+
+![alt text](https://github.com/rafilma/ml/blob/main/matrix%20evaluation.png)
+
+dan ketika di jabarkan kita akan mendapatkan score :
+
 
 Sebagai contoh, Anda memiih kasus klasifikasi dan menggunakan metrik **akurasi, precision, recall, dan F1 score**. Jelaskan mengenai beberapa hal berikut:
 - Penjelasan mengenai metrik yang digunakan
