@@ -121,6 +121,55 @@ Jika direktori sudah dibuat maka kita bisa mendownload datasetnya
 !kaggle datasets download -d thedevastator/cancer-patients-and-air-pollution-a-new-link
 ```
 
+Setelah terdownload, kita bisa mengekstrak dataset terserbut dan memindahkan nya kedalam folder yang sudah di buat 
+
+```bash
+!mkdir cancer_data
+!unzip cancer-patients-and-air-pollution-a-new-link.zip -d cancer_data
+!ls cancer_data
+```
+
+Jika sudah, maka kita bisa langsung membuka file dataset tersebut
+
+```bash
+df = pd.read_csv('cancer_data/cancer patient data sets.csv')
+```
+ kemudian kita bisa panggil data tersebut, karena saya definisakan dengan df maka saya bisa panggil dengan cara
+
+ ```bash
+df.head()
+```
+Selanjutnya kita bisa lihat kolom apa saja yang terdata di dataset tersebut dengan perintah
+
+```bash
+df.columns
+```
+kemudian jika sudah tampil nama nama kolomnya kita bisa eliminasi beberapa kolom dan hanya menampilkan kolom yang di inginkan dengan perintah
+
+```bash
+df=df[['Age', 'Gender', 'Air Pollution', 'Alcohol use',
+       'Dust Allergy', 'OccuPational Hazards', 'Genetic Risk',
+       'chronic Lung Disease', 'Balanced Diet', 'Obesity', 'Smoking',
+       'Passive Smoker', 'Chest Pain', 'Coughing of Blood', 'Fatigue',
+       'Weight Loss', 'Shortness of Breath', 'Wheezing',
+       'Swallowing Difficulty', 'Clubbing of Finger Nails', 'Frequent Cold',
+       'Dry Cough', 'Snoring', 'Level']]
+```
+Maka Kolom yang ditampilkan hanya kolom yang sudah di definisikan diatas. Tapi karena kita akan membuat sebuat model pembelajaran mesin dimana kolom tersebut akan menjadi variable yangmana tidak boleh ada spasi, maka kita bisa merubah nama kolom dengan perintah berikut
+
+```bash
+colname = ['Age', 'Gender', 'Air_Pollution', 'Alcohol_use',
+       'Dust_Allergy', 'OccuPational_Hazards', 'Genetic_Risk',
+       'chronic_Lung_Disease', 'Balanced_Diet', 'Obesity', 'Smoking',
+       'Passive_Smoker', 'Chest_Pain', 'Coughing_of_Blood', 'Fatigue',
+       'Weight_Loss', 'Shortness_of_Breath', 'Wheezing',
+       'Swallowing_Difficulty', 'Clubbing_of_Finger_Nails', 'Frequent_Cold',
+       'Dry_Cough', 'Snoring', 'Level']
+df.columns = colname
+df
+```
+
+
 **Rubrik/Kriteria Tambahan (Opsional)**: 
 - Menjelaskan proses data preparation yang dilakukan
 - Menjelaskan alasan mengapa diperlukan tahapan data preparation tersebut.
