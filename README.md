@@ -60,7 +60,7 @@ Dataset tersebut sejatinya dibuat untuk mempelajari dan memprediksi faktor apa s
 
 Variable yang di pergunakan sebagai parimeter meliputi :  
 
-### Variabel-variabel pada Heart Failure Prediction Dataset adalah sebagai berikut:
+### Variabel-variabel yang digunakan adalah sebagai berikut:
 Variable di dasarkan pada data satu tahun terakhir dimana setiap parameternya di isikan data integer untuk skala 1-10
 - Usia : Usia kita saat menjalakan test
 - Jenis Kelamin : Jeniss kelamin
