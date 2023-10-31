@@ -194,6 +194,22 @@ sns.heatmap(df.corr()[['Level']].sort_values(by='Level', ascending=False), vmin=
 Dan akan diperoleh heatmap berikut
 ![alt text](https://github.com/rafilma/ml/blob/main/eda2.png)
 
+Selanjutnya kita bisa buat distribusi dengan pie chart
+```bash
+fig, axs = plt.subplots(1, 2, figsize=(12, 5))
+
+axs[0].pie(df['Level'].value_counts(), labels=df['Level'].value_counts().index, autopct='%.0f%%')
+axs[0].set_title('Distribution by Level')
+
+axs[1].pie(df['Gender'].value_counts(), labels=df['Gender'].value_counts().index, autopct='%.0f%%')
+axs[1].set_title('Distribution by Gender')
+
+plt.tight_layout()
+plt.show()
+```
+![pie](https://github.com/rafilma/ml/assets/148635738/f4c93e15-ca7f-4691-9f9d-0aab5f1287c7)
+
+
 ## Modeling
 Untuk melakukan proses modeling, disini saya menggunakan klasifikasi dengan algoritma SVC.
 Pertama kita harus menentukan parimeter X dan Y. X merupakan atrribut dan Y adalah Label
