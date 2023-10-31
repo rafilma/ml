@@ -62,29 +62,29 @@ Variable yang di pergunakan sebagai parimeter meliputi :
 
 ### Variabel-variabel yang digunakan adalah sebagai berikut:
 Variable di dasarkan pada data satu tahun terakhir dimana setiap parameternya di isikan data integer untuk skala 1-10
-- Usia : Usia kita saat menjalakan test
-- Jenis Kelamin : Jeniss kelamin
-- Polusi Udara : Seberapa sering kita terpapar daerah yang rawan akan polusi udara
-- Konsumsi Alkohol : Menunjukan seberapa sering kita mengkonsumsi alkohol
-- Alergi terhadap debu : Menunjukan tingkat alergi kita terhadap debu
-- Pekerjaan yang melibatkan bahan berbahaya : Menanyakan seberapa sering kita terpapar bahan berbahaya selama bekerja
-- Faktor Genetik : Menanyakan faktor keturunan secara genetik apakah punya riwayat penyakit kanker paru
-- Penyakit Paru Bawaan : Sudah sekronis apa penykit paru bawaan kita
-- Makan Teratur : Seberapa sering kita makan secara teratur
-- Kelebihan Berat Badan : Seberapa obesitas kah kita dalam skala 1-10 (berdasarkan kalkulasi berat badan ideal)
-- Perokok : Seberapa sering kita merokok
-- Perokok Pasif : Seberapa sering kita menjadi perokok pasif
-- Nyeri Dada : Seberapa sering kita mengalami nyeri dada
-- Batuk Berdarah : Seberapa sering kita mengalami batuk berdarah
-- Kelelahan : Seberapa sering kita mengalami kelelahan (Kurang tidur, Bekerja lembur, overworked)
-- Kekurangan Berat Badan : Seberapa sering kita kekurangan berart badan (Berdasarkan kalkulasi berat badan ideal)
-- Sesak Nafas : Seberapa sering kita mengalami sesak dalam pernafasan
-- Mengi pada Pernafasan : Seberapa sering kita mengalami mengi (wheezing) saat bernafas)
-- Kesusahan dalam menelan : Seberapa sering kita mengalami kesusahan dalam menelan makan
-- Pembengkakan pada Jari : Seberapa sering kita mengalami pembengkakan pada jari tangan
-- Demam : Seberapa sering kita terkenan demam dan flu
-- Batuk Batuk : Seberapa sering kita mengalami batuk batuk
-- Ngorok : Seberapa sering kita mengorok saat tertidur
+- Usia : Usia kita saat menjalakan test (integer)
+- Jenis Kelamin : Jeniss kelamin (integer)
+- Polusi Udara : Seberapa sering kita terpapar daerah yang rawan akan polusi udara (integer)
+- Konsumsi Alkohol : Menunjukan seberapa sering kita mengkonsumsi alkohol (integer)
+- Alergi terhadap debu : Menunjukan tingkat alergi kita terhadap debu (integer)
+- Pekerjaan yang melibatkan bahan berbahaya : Menanyakan seberapa sering kita terpapar bahan berbahaya selama bekerja (integer)
+- Faktor Genetik : Menanyakan faktor keturunan secara genetik apakah punya riwayat penyakit kanker paru (integer)
+- Penyakit Paru Bawaan : Sudah sekronis apa penykit paru bawaan kita (integer)
+- Makan Teratur : Seberapa sering kita makan secara teratur (integer)
+- Kelebihan Berat Badan : Seberapa obesitas kah kita dalam skala 1-10 (berdasarkan kalkulasi berat badan ideal) (integer)
+- Perokok : Seberapa sering kita merokok (integer)
+- Perokok Pasif : Seberapa sering kita menjadi perokok pasif (integer)
+- Nyeri Dada : Seberapa sering kita mengalami nyeri dada (integer)
+- Batuk Berdarah : Seberapa sering kita mengalami batuk berdarah (integer)
+- Kelelahan : Seberapa sering kita mengalami kelelahan (Kurang tidur, Bekerja lembur, overworked) (integer)
+- Kekurangan Berat Badan : Seberapa sering kita kekurangan berart badan (Berdasarkan kalkulasi berat badan ideal) (integer)
+- Sesak Nafas : Seberapa sering kita mengalami sesak dalam pernafasan (integer)
+- Mengi pada Pernafasan : Seberapa sering kita mengalami mengi (wheezing) saat bernafas) (integer)
+- Kesusahan dalam menelan : Seberapa sering kita mengalami kesusahan dalam menelan makan (integer)
+- Pembengkakan pada Jari : Seberapa sering kita mengalami pembengkakan pada jari tangan (integer)
+- Demam : Seberapa sering kita terkenan demam dan flu (integer)
+- Batuk Batuk : Seberapa sering kita mengalami batuk batuk (integer)
+- Ngorok : Seberapa sering kita mengorok saat tertidur (integer)
 
 
 ## Data Preparation
