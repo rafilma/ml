@@ -12,7 +12,7 @@ if Gender == 'Laki laki':
     Gender = 1
 else:
     Gender = 2
-Air_Pollution = st.text_input('Dalam skala 1-10 seberapa sering anda terpapar polusi udara ?', min_value=1.0, max_value=10.0, step=0.1)
+Air_Pollution = st.number_input('Dalam skala 1-10 seberapa sering anda terpapar polusi udara ?', min_value=1.0, max_value=10.0, step=0.1)
 Alcohol_use = st.text_input('Dalam skala 1-10 seberapa sering anda meminum alkohol ?')
 Dust_Allergy = st.text_input('Dalam skala 1-10 apakah anda punya alergi terhadap debu ?')
 OccuPational_Hazards = st.text_input('Dalam skala 1-10 apakah pekerjaan anda melibatkan bahan berbahaya ?')
