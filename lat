@@ -1,0 +1,82 @@
+Berikut adalah kode program yang lengkap untuk memeriksa apakah parameter angka di range 1-20 adalah angka ganjil dan menghentikan iterasi ketika sisa hasil bagi parameter angka dengan 5 adalah 0:
+
+```kotlin
+fun isOddNumber(number: Int): Boolean {
+    return number % 2 != 0
+}
+
+fun main() {
+    val listNumber = 1..20
+    for (number in listNumber) {
+        if (isOddNumber(number)) {
+            print("$number")
+        } else {
+            continue
+        }
+        if (number % 5 == 0) {
+            break
+        }
+    }
+}
+```
+
+Kode di atas menggunakan fungsi `isOddNumber` untuk memeriksa apakah angka ganjil atau tidak, dan kemudian melakukan iterasi melalui rentang angka dari 1 hingga 20. Iterasi akan berhenti jika sisa hasil bagi angka dengan 5 adalah 0.
+
+
+Berikut adalah kode program yang sudah lengkap dengan ketentuan yang diberikan:
+
+```kotlin
+fun calculate(valueA: Int, valueB: Int, valueC: Int?): Int {
+    val c = valueC ?: 1
+    return (valueA + valueB) * c
+}
+
+fun main() {
+    val valueA = 12
+    val valueB = 5
+    val valueC = 20
+    val resultA = calculate(valueA, valueB, valueC)
+    val resultB = calculate(valueA, valueB, null)
+    println(
+        """
+        $resultA
+        $resultB
+        """.trimIndent()
+    )
+}
+```
+
+Dalam kode di atas, fungsi `calculate` mengambil tiga parameter, di mana `valueC` adalah nullable (dengan tanda tanya). Jika `valueC` adalah null, maka kita gunakan nilai default 1 menggunakan elvis operator `?:`. Kemudian, hasil perhitungan sesuai rumus ditampilkan ke konsol.
+
+
+fun main() {
+    val ibuKota = mapOf(
+        "Jawa Barat" to "Bandung",
+        "Jawa Tengah" to "Semarang",
+        "Jawa Timur" to "Surabaya"
+    )
+
+    val ibuKotaJawaBarat = ibuKota["Jawa Barat"]
+    val daftarKunci = ibuKota.keys.toList()
+    val daftarNilai = ibuKota.values.toList()
+
+    println(ibuKotaJawaBarat)
+    println(daftarKunci)
+    println(daftarNilai)
+}
+
+
+fun getMiddleCharacters(string: String): String {
+    val middleIndex = string.length / 2
+    return if (string.length % 2 == 0) {
+        string.substring(middleIndex - 1, middleIndex + 1)
+    } else {
+        string[middleIndex].toString()
+    }
+}
+
+fun main() {
+    println(getMiddleCharacters("sttwastukancana"))
+    println(getMiddleCharacters("teknik informatika"))
+    println(getMiddleCharacters("X"))
+}
